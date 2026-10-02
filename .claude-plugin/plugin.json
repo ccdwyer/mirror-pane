@@ -1,0 +1,42 @@
+{
+  "name": "mirror-pane",
+  "version": "0.1.0",
+  "description": "Before/after simulator screenshots on the same step as a UI edit, side by side in a pane, with a changed-pixel percentage and pinned baselines",
+  "types": "./types/index.d.ts",
+  "license": "MIT",
+  "author": {
+    "name": "Chris Dwyer",
+    "url": "https://github.com/ccdwyer"
+  },
+  "repository": "https://github.com/ccdwyer/mirror-pane",
+  "homepage": "https://github.com/ccdwyer/mirror-pane",
+  "supportUrl": "https://github.com/ccdwyer/mirror-pane/issues",
+  "documentationUrl": "https://github.com/ccdwyer/mirror-pane#readme",
+  "privacyPolicyUrl": "https://github.com/ccdwyer/mirror-pane/blob/main/PRIVACY.md",
+  "userConfig": {
+    "delayMs": {
+      "type": "number",
+      "title": "Reload delay (ms)",
+      "description": "How long to wait after an edit for hot reload before the after-shot, 0 to 5000",
+      "default": 2000
+    },
+    "noteToModel": {
+      "type": "boolean",
+      "title": "Tell Claude",
+      "description": "Add a one-line note to the edit result saying how much the screen changed (never the image itself)",
+      "default": true
+    },
+    "extraPatterns": {
+      "type": "string",
+      "title": "Extra UI paths",
+      "description": "Comma-separated path fragments that also count as UI files, e.g. src/widgets/,.html",
+      "default": ""
+    },
+    "historySize": {
+      "type": "number",
+      "title": "History",
+      "description": "How many before/after pairs to keep, 1 to 30",
+      "default": 10
+    }
+  }
+}
